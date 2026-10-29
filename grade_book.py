@@ -9,6 +9,13 @@ def show_menu():
     print("0. Exit")
 
 
+def add_student():
+    name = input("Student name: ")
+    marks = input("Marks separated by spaces: ")
+    students[name] = [int(m) for m in marks.split()]
+    print(f"Added {name}.")
+
+
 def main():
     while True:
         show_menu()
