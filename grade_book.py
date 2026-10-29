@@ -13,7 +13,11 @@ def show_menu():
 def add_student():
     name = input("Student name: ")
     marks = input("Marks separated by spaces: ")
-    students[name] = [int(m) for m in marks.split()]
+    try:
+        students[name] = [int(m) for m in marks.split()]
+    except ValueError:
+        print("Marks must be whole numbers. Student not added.")
+        return
     print(f"Added {name}.")
 
 
