@@ -6,6 +6,7 @@ students = {}  # name -> list of marks
 
 def show_menu():
     print("\n=== Grade Book ===")
+    print("1. Show grades")
     print("0. Exit")
 
 
@@ -37,6 +38,8 @@ def main():
         if choice == "0":
             print("Goodbye!")
             break
+        elif choice == "1":
+            show_grades()
         else:
             print("Invalid option.")
 
